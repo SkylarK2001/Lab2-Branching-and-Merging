@@ -6,22 +6,25 @@ public class Polymorphism {
      * @param p the person whose role is to be returned
      * @return the role of the person
      */
-    public static String getStudentRole(Person p) {
+   public static void main(String[] args) {
         // TODO: right now for student, it is not returning the role to be student.
-        return p.role;
+       args = Person;
+       return args.role;
     }
 }
 
 class Person {
-    public final String role = "General";
-    private final String name;
+    public String role = "General";
+    private String name;
 
-    public Person(String name) {
+    /*public Person(String name) {
+
         this.name = name;
-    }
+    }*/
 
     public String getName() {
-        return this.name;
+
+        return name;
     }
 }
 
