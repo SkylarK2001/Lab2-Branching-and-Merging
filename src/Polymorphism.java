@@ -6,6 +6,7 @@ public class Polymorphism {
      * @return the role of the person
      */
     public static String getRole(Person p) {
+
         if (p instanceof Student) {
             return ((Student) p).role;
         }
@@ -27,10 +28,12 @@ class Person {
 }
 
 class Student extends Person {
+
     public final String role = "Student";
     private final String studentId;
 
     public Student(String name, String studentId) {
+
         super(name);
         this.studentId = studentId;
     }
