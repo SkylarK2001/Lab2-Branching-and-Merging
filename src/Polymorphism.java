@@ -5,12 +5,12 @@ public class Polymorphism {
      * @param p the person whose role is to be returned
      * @return the role of the person
      */
-   public static String getRole(Person p) {
-       if (p == null) {
-           return "Unknown";
-       }
-
-       return p.getRole();
+    public static String getRole(Person p) {
+        if (p instanceof Student) {
+            return ((Student) p).role;
+        }
+        return p.role;
+    }
 }
 
 class Person {
@@ -18,17 +18,11 @@ class Person {
     private String name;
 
     public Person(String name) {
-
         this.name = name;
     }
 
     public String getName() {
-
         return name;
-    }
-
-    public String getRole() {
-        return role;
     }
 }
 
@@ -39,5 +33,9 @@ class Student extends Person {
     public Student(String name, String studentId) {
         super(name);
         this.studentId = studentId;
+    }
+
+    public String getStudentId() {
+        return studentId;
     }
 }
