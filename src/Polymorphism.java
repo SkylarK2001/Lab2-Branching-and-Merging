@@ -1,30 +1,34 @@
 public class Polymorphism {
-    // TODO TASK 1: Fix the bugs in this code to pass PolymorphismTest.java
 
     /**
      * Returns the role.
      * @param p the person whose role is to be returned
      * @return the role of the person
      */
-   public static void main(String[] args) {
-        // TODO: right now for student, it is not returning the role to be student.
-       args = Person;
-       return args.role;
-    }
+   public static String getRole(Person p) {
+       if (p == null) {
+           return "Unknown";
+       }
+
+       return p.getRole();
 }
 
 class Person {
     public String role = "General";
     private String name;
 
-    /*public Person(String name) {
+    public Person(String name) {
 
         this.name = name;
-    }*/
+    }
 
     public String getName() {
 
         return name;
+    }
+
+    public String getRole() {
+        return role;
     }
 }
 
